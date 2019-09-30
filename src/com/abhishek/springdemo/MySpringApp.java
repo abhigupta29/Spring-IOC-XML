@@ -15,6 +15,9 @@ public class MySpringApp {
 		// execute bean methods
 		System.out.println(coach.getDailyWorkout());
 		
+		// executing constructor injection(dependency injection method)
+		System.out.println(coach.getFortuneAdvice());
+		
 		// close context scope
 		context.close();
 	}

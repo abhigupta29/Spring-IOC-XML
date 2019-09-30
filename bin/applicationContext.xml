@@ -18,14 +18,20 @@
     </bean>
     
 	<!-- Define your beans here -->
-	<bean id="myCricketCoach"
-		class="com.abhishek.springdemo.CricketCoach">
+	<!-- Dependency bean -->
+	<bean id="fortuneTeller" class="com.abhishek.springdemo.FortuneTeller"></bean>
+	
+	<bean id="myCricketCoach" class="com.abhishek.springdemo.CricketCoach">
+		<!-- Dependency injection -->
+		<constructor-arg ref="fortuneTeller" />
 	</bean>
 
 	<bean id="myTrackCoach" class="com.abhishek.springdemo.TrackCoach">
+		<constructor-arg ref="fortuneTeller" />
 	</bean>
 	
 	<bean id="myFootballCoach" class="com.abhishek.springdemo.FootballCoach">
+		<constructor-arg ref="fortuneTeller" />
 	</bean>
 
 </beans>

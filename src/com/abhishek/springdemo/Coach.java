@@ -1,5 +1,5 @@
 package com.abhishek.springdemo;
 
-public interface Coach {
+public interface Coach extends Fortune{
 	public String getDailyWorkout();
 }
