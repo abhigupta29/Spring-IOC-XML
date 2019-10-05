@@ -22,7 +22,7 @@
 	<bean id="fortuneTeller" class="com.abhishek.springdemo.FortuneTeller"></bean>
 	
 	<bean id="myCricketCoach" class="com.abhishek.springdemo.CricketCoach">
-		<!-- Dependency injection -->
+		<!-- Constructor injection -->
 		<constructor-arg ref="fortuneTeller" />
 	</bean>
 
@@ -31,7 +31,8 @@
 	</bean>
 	
 	<bean id="myFootballCoach" class="com.abhishek.springdemo.FootballCoach">
-		<constructor-arg ref="fortuneTeller" />
+		<!-- Setter injection -->
+		<property name="fortuneTeller" ref="fortuneTeller" />
 	</bean>
 
 </beans>
