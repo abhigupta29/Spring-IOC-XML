@@ -6,7 +6,7 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
-
+	
 	<!-- 
 		Add a logger config to see logging messages.		
 		- For more detailed logs, set values to "FINEST"
@@ -17,6 +17,7 @@
     	<property name="printedLoggerLevel" value="FINE"/>
     </bean>
     
+    <context:property-placeholder location="classpath:sports.properties" />
 	<!-- Define your beans here -->
 	<!-- Dependency bean -->
 	<bean id="fortuneTeller" class="com.abhishek.springdemo.FortuneTeller"></bean>
@@ -34,7 +35,7 @@
 		<!-- Setter injection -->
 		<property name="fortuneTeller" ref="fortuneTeller" />
 		<!-- Literal injection -->
-		<property name="teamName" value="Manchester United" />
+		<property name="teamName" value="${foo.team}" />
 	</bean>
 
 </beans>
