@@ -33,6 +33,8 @@
 	<bean id="myFootballCoach" class="com.abhishek.springdemo.FootballCoach">
 		<!-- Setter injection -->
 		<property name="fortuneTeller" ref="fortuneTeller" />
+		<!-- Literal injection -->
+		<property name="teamName" value="Manchester United" />
 	</bean>
 
 </beans>

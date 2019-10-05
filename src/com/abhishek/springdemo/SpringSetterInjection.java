@@ -9,11 +9,12 @@ public class SpringSetterInjection {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		// load bean
-		Coach coach = context.getBean("myFootballCoach", Coach.class);
+		FootballCoach coach = context.getBean("myFootballCoach", FootballCoach.class);
 		
 		// execute bean methods
 		System.out.println(coach.getDailyWorkout());
 		System.out.println(coach.getFortuneAdvice());
+		System.out.println(coach.getTeamName());
 		
 		// close context
 		context.close();
