@@ -23,4 +23,12 @@ public class TrackCoach implements Coach {
 		return fortuneTeller.getFortuneAdvice();
 	}
 	
+	public void doSomeStartupStuff() {
+		System.out.println("TrackCoach: Inside init-method doSomeStartupStuff");
+	}
+	
+	public void doSomeCleanupStuff() {
+		System.out.println("TrackCoach: Inside init-method doSomeCleanupStuff");
+	}
+	
 }
