@@ -23,7 +23,8 @@
 	
 	
 	<bean id="myTrackCoach"
-		 class="com.abhishek.springdemo.TrackCoach">
+		 class="com.abhishek.springdemo.TrackCoach"
+		 scope="prototype">
 		 <!-- Default scope is singleton -->
 		<constructor-arg ref="fortuneTeller" />
 	</bean>
